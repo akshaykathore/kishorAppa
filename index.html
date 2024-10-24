@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Using PHP And MySQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1>Blog | New Post</h1>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form action="blog_post_process.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="blogTitle" class="form-label">Blog Title</label>
+                        <input id="blogTitle" name="blogtitle" type="text" class="form-control" placeholder="Blog Title..." autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blogDate">Date</label>
+                        <input id="blogDate" name="blogdate" type="text" class="form-control" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uploadimage">Upload Image</label>
+                        <input type="file" name="uploadimage" class="form-control-file" accept="image/*">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blogPara">Blog Paragraph</label>
+                        <textarea id="blogPara" name="blogpara" class="form-control" rows="5" placeholder="Blog Paragraph..." autocomplete="off" required></textarea>
+                    </div>
+
+                    <button id="saveBtn" type="submit" class="btn btn-primary btn-block">Save Post</button>
+                </form>
+
+                <br>
+                <a href="index.php" class="btn btn-secondary btn-block">Go to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
